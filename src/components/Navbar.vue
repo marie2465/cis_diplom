@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="containers">
     <nav class="nav">
     <a href="/">
       <img src="../assets/images/house.svg" alt="home" class="nav__icon">
@@ -121,10 +121,10 @@
         </ul>
       </li>
     </ul>
-    <img src="../assets/images/house.svg" alt="home" class="nav__icon">
+    <img src="../assets/images/server.svg" alt="home" class="nav__icon">
   </nav>
-    <footer>
-      <h1>dfggfh</h1>
+    <footer class="footer">
+      <p>CIS software provided courtesy of WorldSkills International</p>
     </footer>
   </div>
 </template>

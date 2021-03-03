@@ -18,18 +18,18 @@ body {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 100px;
-}
+  &__title {
+    font-size: 36px;
+    font-weight: 500;
+    white-space: pre-wrap;
+    text-align: center;
+    padding-left: 180px;
+  }
 
-.header__title {
-  font-size: 36px;
-  font-weight: 500;
-  white-space: pre-wrap;
-  text-align: center;
-  padding-left: 180px;
-}
-
-.header__logo {
-  padding: 0 15px;
+  &__logo {
+    padding: 0 15px;
+    width: 150px;
+  }
 }
 
 .warning {

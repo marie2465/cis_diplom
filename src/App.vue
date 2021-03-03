@@ -3,7 +3,7 @@
     <div class="header">
       <div class="header__title"></div>
       <div class="header__logo">
-        <img src="./assets/images/logo.png" alt="logo">
+<!--        <img src="./assets/images/logo.svg" alt="logo">-->
       </div>
     </div>
     <Navbar/>
