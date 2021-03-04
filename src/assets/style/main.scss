@@ -1,8 +1,18 @@
-@import "blocks/header";
-@import "blocks/navbar";
-@import "blocks/footer";
+@import "common";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body{
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+// Blocks
+@import "blocks/layout/header";
+@import "blocks/layout/navbar";
+@import "blocks/layout/footer";
+@import "blocks/auth/form";

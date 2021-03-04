@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  &__title {
+    font-size: 36px;
+    font-weight: 500;
+    white-space: pre-wrap;
+    text-align: center;
+    padding-left: 180px;
+  }
+
+  &__logo {
+    padding: 0 15px;
+    width: 150px;
+  }
+}
+
+.warning {
+  max-width: 750px;
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  padding: 15px;
+  margin: 0 auto 20px auto;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
