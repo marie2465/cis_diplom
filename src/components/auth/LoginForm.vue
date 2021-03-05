@@ -6,9 +6,9 @@
     <div class="form">
       <form action="" class="login-form">
         <label for="username">Username</label>
-        <input type="text" id="username" required ref="username">
+        <input type="text" id="username" required ref="username" v-model="formData.login">
         <label for="password">Password</label>
-        <input type="password" id="password" required ref="password">
+        <input type="password" id="password" required ref="password" v-model="formData.password">
         <button type="submit" @click.prevent="checkValid()">Login</button>
       </form>
     </div>
@@ -20,7 +20,11 @@ export default {
   name: 'LoginForm',
   data: function () {
     return {
-      isValid: true
+      isValid: true,
+      formData: {
+        login:'',
+        password:''
+      }
     }
   },
   methods: {
