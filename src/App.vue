@@ -16,10 +16,12 @@
 import Navbar from '@/components/layout/Navbar'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import Import from './components/competition/ImportForm'
 
 export default {
   name: 'App',
   components: {
+    Import,
     Footer,
     Header,
     Navbar
