@@ -9,7 +9,7 @@
           <a href="/" class="nav__link">Competition</a><span class="nav__dropdown-icon">&#9660;</span>
           <ul class="nav__subnav">
             <li>
-              <a href="/" class="nav__subnav-link">Import data</a>
+              <a href="../competition/ImportForm.vue" class="nav__subnav-link">Import data</a>
             </li>
             <li>
               <a href="/" class="nav__subnav-link">Export data</a>
