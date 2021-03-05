@@ -4,7 +4,7 @@
     <Navbar/>
     <div class="layout__page page">
       <div class="page__content">
-        <Import/>
+        <router-view></router-view>
       </div>
     </div>
     <Footer/>
