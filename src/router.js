@@ -13,6 +13,11 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: () => import('./pages/Auth.vue')
+    },
+    {
+      path:'/import',
+      name:'import',
+      component:()=>import('./components/competition/ImportForm.vue')
     }
   ]
 })

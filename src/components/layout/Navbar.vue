@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav class="nav">
-      <a href="/">
+      <a class="nav__first" href="/">
         <img src="../../assets/images/house.svg" alt="home" class="nav__icon">
       </a>
       <ul class="nav__list nav__list--left">
