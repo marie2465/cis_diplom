@@ -1,14 +1,14 @@
 <template>
   <div class="home">
 <!--    This is a home page-->
-    <Import/>
+    <ExportForm/>
   </div>
 </template>
 
 <script>
-import Import from "../components/competition/ImportForm";
+import ExportForm from "../components/competition/ExportForm";
 export default {
   name: 'Home',
-  components: {Import}
+  components: {ExportForm}
 }
 </script>
