@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="import">
+    <div class="component">
       <div class="import__content">
         <p class="import__head">Export Data</p>
       </div>
@@ -13,7 +13,6 @@
           </option>
         </select>
       </div>
-
       <div class="import__row" v-if=" selected==='Marking Scheme' ">
         <div class="import__row__header">
           Marking Scheme
