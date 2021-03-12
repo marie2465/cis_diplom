@@ -6,16 +6,16 @@
       </div>
       <div class="skills__selectes">
         <i class="skills__selectes__text">Select a skill</i>
-        <select name="values" id="checks" class="skills__selectes__sel" v-model="selectedOption">
+        <select name="values" id="checks" class="skills__select select" v-model="selectedOption">
           <option value="zero"></option>
           <option value="test competition">00-Тестовая компетенция</option>
           <option value="test competition junior">00J-Тестовая компетенция юниоры</option>
         </select>
-        <button type="submit" class="skills__selectes__button-green" @click="addData()">New</button>
-        <button type="submit" class="skills__selectes__button-red" disabled ref="deleteButton">Delete</button>
+        <button type="submit" class="skills__selectes__button-green btn btn--green" @click="addData()">New</button>
+        <button type="submit" class="skills__selectes__button-red btn btn--red" disabled ref="deleteButton">Delete</button>
       </div>
-      <div class="skills__forms">
-        <div class="skills__forms__head">
+      <div class="skills__form blue-form">
+        <div class="blue-form__head">
           <p>Skill Details</p>
         </div>
         <div class="skills__table" :class="showData ? 'skills__table--disabled' : ''">
@@ -24,16 +24,16 @@
               <tr>
                 <th class="skills__table-heads">Skill Number</th>
                 <td>
-                  <input class="skills__table-input" type="text" :disabled="showData"
+                  <input class="skills__table-input input" type="text" :disabled="showData"
                          :value="formData[selectedOption].number">
                 </td>
               </tr>
               <tr>
                 <th class="skills__table-heads">Name</th>
                 <td>
-                  <input class="skills__table-input" type="text" :disabled="showData"
+                  <input class="skills__table-input input" type="text" :disabled="showData"
                          :value="formData[selectedOption].name">
-                  <select name="lang" id="lang" class="import__select" :disabled="showData">
+                  <select name="lang" id="lang" class="skills__select select" :disabled="showData">
                     <option value="English" :selected="formData[selectedOption].language === 'English'">English</option>
                     <option value="Chinese" :selected="formData[selectedOption].language === 'Chinese'">Chinese (China)</option>
                     <option value="French" :selected="formData[selectedOption].language === 'French'">French</option>
@@ -43,7 +43,7 @@
               <tr>
                 <th class="skills__table-heads">Type</th>
                 <td>
-                  <select name="lang" id="type" class="skills__select" :disabled="showData">
+                  <select name="lang" id="type" class="skills__select select" :disabled="showData">
                     <option value="zero" :selected="formData[selectedOption].type === null"></option>
                     <option value="Official" :selected="formData[selectedOption].type === 'Official'">
                       Official
@@ -101,7 +101,7 @@
               <tr>
                 <th></th>
                 <td>
-                  <button class="skills__button" type="submit" :disabled="showData">Save</button>
+                  <button class="skills__button btn btn--lightblue" type="submit" :disabled="showData">Save</button>
                 </td>
               </tr>
             </tbody>
