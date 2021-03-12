@@ -5,7 +5,7 @@
         <p>Skills</p>
       </div>
       <div class="skills__selectes">
-        <i class="skills__selectes__text">Select a skills</i>
+        <i class="skills__selectes__text">Select a skill</i>
         <select name="values" id="checks" class="skills__selectes__sel">
           <option value="zero"></option>
           <option value="test competition">
@@ -27,7 +27,7 @@
             <tr>
               <th class="skills__table-heads">Skill Number</th>
               <td>
-                <input class="skills__table-input" type="text">
+                <input class="skills__table-input" type="text" :disabled="input">
               </td>
             </tr>
             <tr>
@@ -103,7 +103,10 @@
 
 <script>
 export default {
-  name: "SkillsForm"
+  name: "SkillsForm",
+  data: () => ({
+    input: false
+  })
 }
 </script>
 
