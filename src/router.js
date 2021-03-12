@@ -18,6 +18,16 @@ export default new Router({
       path:'/import',
       name:'import',
       component:()=>import('./components/competition/ImportForm.vue')
+    },
+    {
+      path:'/export',
+      name:'export',
+      component:()=>import('./components/competition/ExportForm.vue')
+    },
+    {
+      path:'/skills',
+      name:'skills',
+      component:()=>import('./components/competition/SkillsForm.vue')
     }
   ]
 })

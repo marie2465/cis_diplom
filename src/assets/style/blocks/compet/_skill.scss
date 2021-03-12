@@ -1,8 +1,9 @@
 .skills{
-  margin-top: 10px;
+  margin-top: 20px;
   &__header{
     font-size: 30px;
     line-height: 1.1;
+    margin-bottom: 10px;
   }
 
   &__selectes{
@@ -62,5 +63,16 @@
   &__table{
     padding: 15px;
 
+    &-heads{
+      float: left;
+      font-weight: normal;
+    }
+
+    &-input{
+      border-radius: 4px;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      margin-left: 30px;
+    }
   }
 }

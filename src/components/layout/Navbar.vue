@@ -9,13 +9,13 @@
           <a href="/" class="nav__link">Competition</a><span class="nav__dropdown-icon">&#9660;</span>
           <ul class="nav__subnav">
             <li>
-              <a href="../competition/ImportForm.vue" class="nav__subnav-link">Import data</a>
+              <router-link to="/import" class="nav__subnav-link">Import data</router-link>
             </li>
             <li>
-              <a href="/" class="nav__subnav-link">Export data</a>
+              <router-link to="/export" class="nav__subnav-link">Export data</router-link>
             </li>
             <li>
-              <a href="/" class="nav__subnav-link">Skills</a>
+              <router-link to="/skills" class="nav__subnav-link">Skills</router-link>
             </li>
             <li>
               <a href="/" class="nav__subnav-link">People</a>

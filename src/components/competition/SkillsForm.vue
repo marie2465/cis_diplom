@@ -25,15 +25,15 @@
         <div class="skills__table">
           <table>
             <tr>
-              <th class="skills__table__heads">Skill Number</th>
+              <th class="skills__table-heads">Skill Number</th>
               <td>
-                <input type="text">
+                <input class="skills__table-input" type="text">
               </td>
             </tr>
             <tr>
-              <th>Name</th>
+              <th class="skills__table-heads">Name</th>
               <td>
-                <input type="text">
+                <input class="skills__table-input" type="text">
                 <select name="lang" id="lang" class="import__select">
                   <option value="English">English</option>
                   <option value="Chinese">Chinese (China)</option>
@@ -42,9 +42,9 @@
               </td>
             </tr>
             <tr>
-              <th>Type</th>
+              <th class="skills__table-heads">Type</th>
               <td>
-                <select name="lang" id="type" class="import__select">
+                <select name="lang" id="type" class="skills__select">
                   <option value="zero"></option>
                   <option value="Official">Official</option>
                   <option value="Demonstration">Demonstration</option>

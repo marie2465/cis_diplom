@@ -21,7 +21,7 @@
           <div class="import__row__padded">Export a marking scheme to the marking scheme spreadsheet</div>
           <div class="import__row__padded1">
             <i>Skills</i>
-            <select class="import__select__check" name="checkbox">
+            <select class="import__select-check" name="checkbox">
               <option></option>
               <option value="test competition">
                 <a href="#">00-Тестовая компетенция</a>
@@ -33,7 +33,7 @@
           </div>
           <div class="import__row__padded">
             <i>Format</i>
-            <select class="import__select__cis" name="values" id="selected">
+            <select class="import__select-cis" name="values" id="selected">
               <option value="cis 4.1">cis 4.1</option>
               <option value="cis 4.0">cis 4.0</option>
             </select>
