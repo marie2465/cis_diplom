@@ -25,7 +25,7 @@
         <div class="skills__table">
           <table>
             <tr>
-              <th class="skills__table__">Skill Number</th>
+              <th class="skills__table__heads">Skill Number</th>
               <td>
                 <input type="text">
               </td>
