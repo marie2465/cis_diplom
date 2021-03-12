@@ -27,6 +27,10 @@
   font-size: 14px;
   cursor: pointer;
 
+  &:disabled {
+    opacity: 0.35;
+  }
+
   &--green {
     background: #5cb85c;
     border: #4cae4c;
@@ -45,10 +49,6 @@
       background-color: #c9302c;
       border-color: #ac2925;
     }
-
-    &:disabled {
-      background: #e0a2a0;
-    }
   }
 
   &--lightblue {
@@ -57,10 +57,6 @@
 
     &:hover {
       color: black;
-    }
-
-    &:disabled {
-      background: #b2d5e8;
     }
   }
 }
