@@ -5,8 +5,8 @@
         <p>Skills</p>
       </div>
       <div class="skills__selectes">
-        <i>Select a skills</i>
-        <select name="values" id="checks" class="import__select">
+        <i class="skills__selectes__text">Select a skills</i>
+        <select name="values" id="checks" class="skills__selectes__sel">
           <option value="zero"></option>
           <option value="test competition">
             <a href="#">00-Тестовая компетенция</a>
@@ -15,17 +15,17 @@
             <a href="#">00J-Тестовая компетенция юниоры</a>
           </option>
         </select>
-        <button type="submit">New</button>
-        <button type="submit">Delete</button>
+        <button type="submit" class="skills__selectes__button-green">New</button>
+        <button type="submit" class="skills__selectes__button-red">Delete</button>
       </div>
-      <div class="skills_forms">
-        <div class="skills_forms_head">
+      <div class="skills__forms">
+        <div class="skills__forms__head">
           <p>Skill Details</p>
         </div>
-        <div class="skills_table">
+        <div class="skills__table">
           <table>
             <tr>
-              <th>Skill Number</th>
+              <th class="skills__table__">Skill Number</th>
               <td>
                 <input type="text">
               </td>
