@@ -45,6 +45,10 @@
       color: white;
       border-radius: 4px;
       font-size: 14px;
+
+      &:disabled {
+        background: #e0a2a0;
+      }
     }
   }
   &__forms{
@@ -62,6 +66,10 @@
 
   &__table{
     padding: 15px;
+
+    &--disabled {
+      background: #f5f3f3;
+    }
 
     &-heads{
       float: left;
