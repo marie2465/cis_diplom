@@ -15,19 +15,24 @@ export default new Router({
       component: () => import('./pages/Auth.vue')
     },
     {
-      path:'/import',
+      path:'/competition/import',
       name:'import',
       component:()=>import('./components/competition/ImportForm.vue')
     },
     {
-      path:'/export',
+      path:'/competition/export',
       name:'export',
       component:()=>import('./components/competition/ExportForm.vue')
     },
     {
-      path:'/skills',
+      path:'/competition/skills',
       name:'skills',
       component:()=>import('./components/competition/SkillsForm.vue')
+    },
+    {
+      path:'/competition/people',
+      name:'people',
+      component:()=>import('./components/competition/PeopleForm.vue')
     }
   ]
 })
