@@ -34,7 +34,7 @@
           </div>
           <div class="import__row__padded">
             <i>Format</i>
-            <select class="import__select" name="values" id="selected">
+            <select class="import__select__cis" name="values" id="selected">
               <option value="cis 4.1">cis 4.1</option>
               <option value="cis 4.0">cis 4.0</option>
             </select>
