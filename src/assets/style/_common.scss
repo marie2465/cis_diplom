@@ -8,6 +8,12 @@
   padding: 0 30px;
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.compet{
+  display: flex;
+  flex-direction: column;
 }
 
 .layout {
@@ -26,6 +32,9 @@
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
+  margin-bottom: 10px;
+  font-weight: 400;
+  display: inline-block;
 
   &:disabled {
     opacity: 0.35;
@@ -33,7 +42,7 @@
 
   &--green {
     background: #5cb85c;
-    border: #4cae4c;
+    border: 1px solid #4cae4c;
 
     &:hover {
       background-color: #449d44;
@@ -43,7 +52,7 @@
 
   &--red {
     background: #d9534f;
-    border: #d43f3a;
+    border: 1px solid #d43f3a;
 
     &:hover {
       background-color: #c9302c;

@@ -27,14 +27,34 @@
       }
     }
   }
+
+  &__link{
+    color: #337ab7;
+    margin-left: 5px;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  &__tfoot{
+    tr{
+      display: flex;
+      flex-direction: column;
+      th{
+        text-align: left;
+        padding-bottom: 10px;
+        font-weight: 400;
+      }
+    }
+  }
 }
 
 .people {
-
   &__title {
     font-size: 30px;
     font-weight: 500;
-    margin: 20px 0 10px 0;
+    margin-bottom: 10px;
   }
 
   &__group {
@@ -55,8 +75,8 @@
   }
 
   &__form {
-    margin-left: 30px;
-    flex: 1 1 25%;
+    margin-left: 15px;
+    flex: 1 1 33%;
 
     &-body {
       display: flex;
@@ -66,7 +86,7 @@
   }
 
   &__add-person {
-    margin-top: 20px;
+    font-size: 14px;
   }
 
   &__input, &__select {

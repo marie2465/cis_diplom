@@ -32,7 +32,7 @@ export default new Router({
     {
       path:'/competition/people',
       name:'people',
-      component:()=>import('./components/competition/PeopleForm.vue')
+      component:()=>import('./pages/Competition/People.vue')
     }
   ]
 })
