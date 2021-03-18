@@ -2,8 +2,8 @@
   <div class="compet component">
     <PeopleHeader class="compet"/>
     <div class="people__group">
-      <PeopleTable class="people-table "/>
-      <PeopleForm class="people__form"/>
+      <PeopleTable/>
+      <PeopleForm/>
     </div>
   </div>
 </template>
