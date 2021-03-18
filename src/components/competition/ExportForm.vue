@@ -1,9 +1,7 @@
 <template>
   <div>
     <div class="component">
-      <div>
-        <p class="import__head">Export Data</p>
-      </div>
+      <p class="import__head">Export Data</p>
       <div class="import__container">
         <i class="import__text import__text-header">Type of data to export :</i>
         <select class="import__select" name="checkbox" id="sel" v-model="selected">
