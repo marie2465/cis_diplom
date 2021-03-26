@@ -6,7 +6,7 @@
     th {
       border-top: 1px solid #ccc;
       border-bottom: 1px solid #ccc;
-      padding: 5px 15px;
+      padding: 5px 0 5px 15px;
       text-align: left;
     }
   }
@@ -17,7 +17,7 @@
       vertical-align: top;
       padding: 12px 15px;
       border: none;
-      width: 25%;
+      width: 1%;
       white-space: nowrap;
     }
 
@@ -25,6 +25,15 @@
       td {
         background: #eee;
       }
+    }
+  }
+
+  &__first{
+    color: #337ab7;
+    margin-left: -15px;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
     }
   }
 
