@@ -1,14 +1,11 @@
 <template>
-  <div class="home">
+  <div class="import">
     This is a home page
-    <LoginForm/>
   </div>
 </template>
 
 <script>
-import LoginForm from "../components/auth/LoginForm";
 export default {
-  name: 'Home',
-  components: {LoginForm}
+  name: 'Home'
 }
 </script>

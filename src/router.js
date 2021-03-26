@@ -13,6 +13,26 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: () => import('./pages/Auth.vue')
+    },
+    {
+      path:'/competition/import',
+      name:'import',
+      component:()=>import('./components/competition/ImportForm.vue')
+    },
+    {
+      path:'/competition/export',
+      name:'export',
+      component:()=>import('./components/competition/ExportForm.vue')
+    },
+    {
+      path:'/competition/skills',
+      name:'skills',
+      component:()=>import('./components/competition/SkillsForm.vue')
+    },
+    {
+      path:'/competition/people',
+      name:'people',
+      component:()=>import('./pages/Competition/People.vue')
     }
   ]
 })

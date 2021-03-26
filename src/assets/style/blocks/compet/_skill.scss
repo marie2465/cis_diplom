@@ -1,0 +1,60 @@
+.skills {
+  &__header{
+    font-size: 30px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+
+  &__selectes{
+    padding: 8px 15px 0 0;
+    font-size: 16px;
+
+    &__text{
+      font-size: 14px;
+      font-style: normal;
+    }
+
+    &__button-green{
+      margin: 0 5px;
+    }
+
+    &__button-red{
+    }
+  }
+  &__form {
+    margin-top: 20px;
+  }
+
+  &__table{
+    padding: 15px;
+
+    &--disabled {
+      background: #f5f3f3;
+    }
+
+    &-heads{
+      float: left;
+      font-weight: normal;
+    }
+
+    &-input{
+      margin-left: 30px;
+    }
+  }
+
+  &__select{
+    margin-left: 30px;
+  }
+
+  #lang {
+    margin-left: 5px !important;
+  }
+
+  &__checkbox{
+    margin: 5px 30px;
+  }
+
+  &__button{
+    margin-left: 30px;
+  }
+}
