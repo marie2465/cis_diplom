@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="component">
+  <div class="component">
+    <div class="import">
       <p class="import__head">Export Data</p>
       <div class="import__container">
         <i class="import__text import__text-header">Type of data to export :</i>
