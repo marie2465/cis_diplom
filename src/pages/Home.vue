@@ -1,5 +1,5 @@
 <template>
-  <div class="import">
+  <div class="component">
     This is a home page
   </div>
 </template>

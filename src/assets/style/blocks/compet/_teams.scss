@@ -1,0 +1,44 @@
+.teams {
+  &__head {
+    font-size: 30px;
+    line-height: 1.1;
+  }
+  &__content {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+  &__text{
+    font-style: normal;
+  }
+  &__search {
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    margin-left: 10px;
+    font-size: 25px;
+    width: 15%;
+    &-div{
+      border-top: 1px solid #cccccc;
+    }
+    &-p {
+      border: 1px solid #ccc;
+      margin: 5px;
+      font-size: 25px;
+      align-items: center;
+      width: 94%;
+    }
+    &-p:focus {
+      border: 1px solid #000;
+    }
+    &-text{
+      font-size: 15px;
+      padding-left: 5px;
+      padding-bottom: 5px;
+    }
+  }
+  &__dropdown-icon {
+    right: -20px;
+    font-size: 10px;
+    padding-left: 5px;
+  }
+}

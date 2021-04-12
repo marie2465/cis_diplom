@@ -65,6 +65,9 @@ export default {
     },
     select () {
       this.allSelected = false
+    },
+    sortedFirst(){
+      this.selected = []
     }
   }
 }
