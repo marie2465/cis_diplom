@@ -1,7 +1,7 @@
 <template>
   <div class="component">
     <div class="teams">
-      <div>/div>
+      <div>
         <p class="teams__head">Teams Menegment</p>
         <div class="teams__content">
           <i class="teams__text">Select a skill</i>
@@ -20,8 +20,14 @@
             v-bind:headerTable="headertable = 'Competitor not in team'"/>
         </div>
         <div class="teams__table-btn">
-          <button class="btn btn--lightblue" disabled>Group</button>
-          <button class="btn btn--lightblue" disabled> Ungroup</button>
+          <button class="btn btn--lightblue teams__btn" disabled>
+            Group
+            <span class="chevron right"></span>
+          </button>
+          <button class="btn btn--lightblue teams__btn" disabled>
+            <span class="chevron left"></span>
+            Ungroup
+          </button>
         </div>
         <div class="teams__table-imports">
           <TeamsTable

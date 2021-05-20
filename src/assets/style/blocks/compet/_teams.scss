@@ -51,53 +51,88 @@
     padding-left: 5px;
   }
 
-  &__table{
+  &__table {
     margin-top: 10px;
     height: 40px;
     display: flex;
     flex-direction: row;
 
-    &-import{
+    &-import {
       margin-right: 20px;
       width: 40%;
     }
 
-    &-btn{
+    &-btn {
       padding: 10px;
       margin: 10px;
     }
 
-    &-imports{
+    &-imports {
       margin-left: 20px;
       width: 30%;
     }
   }
 
-  &__tables{
+  &__tables {
     border: 1px solid #003b5c;
     border-radius: 4px;
 
-    &-header{
+    &-header {
       background: #003b5c;
       width: 100%;
     }
 
-    &-content{
+    &-content {
       padding: 10px 20px;
       color: white;
     }
 
-    &-competitors{
+    &-competitors {
       margin: 10px 10px 30px 10px;
       border-radius: 4px;
       border: 1px solid #cccccc;
       border-bottom: 1px solid white;
     }
 
-    &-items{
-      color: black;
-      padding: 5px 10px;
+    &-items {
+      color: #545454;
+      padding: 10px 15px;
       border-bottom: 1px solid #cccccc;
     }
   }
+
+  &__btn {
+    margin: 70px 3px;
+  }
 }
+
+.chevron {
+  &:before {
+    border-style: solid;
+    border-width: 0.25em 0.25em 0 0;
+    content: '';
+    display: inline-block;
+    height: 0.45em;
+    left: 0.15em;
+    position: relative;
+    top: 0.15em;
+    transform: rotate(-45deg);
+    vertical-align: top;
+    width: 0.45em;
+  }
+}
+
+.chevron.right {
+  &:before {
+    left: 0;
+    transform: rotate(45deg);
+  }
+}
+
+.chevron.left {
+  &:before {
+    left: 0.25em;
+    transform: rotate(-135deg);
+  }
+}
+
