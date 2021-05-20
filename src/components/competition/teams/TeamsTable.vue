@@ -3,11 +3,11 @@
     <div class="teams__tables-header">
       <p class="teams__tables-content"> {{ headerTable }}</p>
     </div>
-    <div class="teams__tables-competitors" v-if="showData === true">
+    <div class="teams__tables-competitors" v-if="showData">
       <div class="teams__tables-items"
-           v-for="i of itemsCompetitor"
-           :key="i">
-        {{ i }}
+           v-for="(value, index) of itemsCompetitor"
+           :key="index">
+        {{ value }}
       </div>
     </div>
   </div>
@@ -19,15 +19,15 @@ export default {
   props: {
     itemsCompetitor: {
       type: Array,
-      required: true,
+      default: () => []
     },
     showData: {
       type: Boolean,
-      required: true
+      default: () => false
     },
     headerTable: {
       type: String,
-      required: true
+      default: () => ''
     }
   },
   data() {

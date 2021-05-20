@@ -8,16 +8,15 @@
           <CustomSelect
             :options="items"
             class="selectes"
-            @input="alert(displayToKey($event))"
           />
         </div>
       </div>
       <div class="teams__table">
         <div class="teams__table-import">
           <TeamsTable
-            v-bind:itemsCompetitor="itemsCompetitor"
-            v-bind:showData="showData = true"
-            v-bind:headerTable="headertable = 'Competitor not in team'"/>
+            :itemsCompetitor="itemsCompetitor"
+            :showData="showData = true"
+            :headerTable="headertable = 'Competitor not in team'"/>
         </div>
         <div class="teams__table-btn">
           <button class="btn btn--lightblue teams__btn" disabled>
@@ -31,8 +30,8 @@
         </div>
         <div class="teams__table-imports">
           <TeamsTable
-            v-bind:showData="showData = false"
-            v-bind:headerTable="headertable = 'Teams'"
+            :showData="showData = false"
+            :headerTable="headertable = 'Teams'"
           />
         </div>
       </div>
@@ -41,12 +40,15 @@
 </template>
 
 <script>
-import CustomSelect from "@/components/competition/component/CustomSelect";
-import TeamsTable from "@/components/competition/teams/TeamsTable";
+import CustomSelect from '@/components/competition/component/CustomSelect'
+import TeamsTable from '@/components/competition/teams/TeamsTable'
 
 export default {
-  name: "Teams",
-  components: {TeamsTable, CustomSelect},
+  name: 'Teams',
+  components: {
+    TeamsTable,
+    CustomSelect
+  },
   data: function () {
     return {
       items: [
@@ -59,7 +61,7 @@ export default {
         '(77) Конкурсант Москва'
       ],
       headertable: 'Competitor not in team'
-    };
+    }
   }
 }
 </script>

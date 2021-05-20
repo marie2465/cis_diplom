@@ -52,10 +52,6 @@
   left: 0;
   right: 0;
   z-index: 1;
-
-  :hover {
-    color: #ffffff;
-  }
 }
 
 .custom-select .items div {
@@ -67,6 +63,7 @@
 
 .custom-select .items div:hover {
   background-color: #66afe9;
+  color: #ffffff;
 }
 
 .selectHide {

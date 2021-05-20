@@ -4,9 +4,9 @@
       {{ selected }}
     </div>
     <div class="items" :class="{ selectHide: !open }">
-      <input class="custom-select__input" >
-      <div class="custom-select__items"
-        v-for="(option, i) of options"
+      <input class="custom-select__input" v-model="searchText">
+      <div class="custom-select__item"
+        v-for="(option, i) in search"
         :key="i"
         @click="
           selected = option;
@@ -45,7 +45,13 @@ export default {
           ? this.options[0]
           : null,
       open: false,
+      searchText: ''
     };
+  },
+  computed: {
+    search () {
+      return this.options.filter(option => option.toLowerCase().includes(this.searchText))
+    }
   },
   mounted() {
     this.$emit("input", this.selected);
