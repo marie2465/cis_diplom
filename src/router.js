@@ -37,7 +37,7 @@ export default new Router({
     {
       path:'/competition/teams',
       name:'teams',
-      component:()=>import('./components/competition/team/Teams.vue')
+      component:()=>import('./components/competition/teams/Teams.vue')
     }
   ]
 })
