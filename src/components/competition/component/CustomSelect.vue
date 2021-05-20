@@ -1,11 +1,11 @@
 <template>
-  <div class="custom-select" :tabindex="tabindex" @blur="open = false">
+  <div class="custom-select" :tabindex="tabindex" >
     <div class="selected" :class="{ open: open }" @click="open = !open">
       {{ selected }}
     </div>
     <div class="items" :class="{ selectHide: !open }">
-      <input class="custom-select__input" @focus="search = true" @blur="search = false">
-      <div
+      <input class="custom-select__input" >
+      <div class="custom-select__items"
         v-for="(option, i) of options"
         :key="i"
         @click="
@@ -29,7 +29,7 @@ export default {
     default: {
       type: String,
       required: false,
-      default: null,
+      default: '',
     },
     tabindex: {
       type: Number,
@@ -45,7 +45,6 @@ export default {
           ? this.options[0]
           : null,
       open: false,
-      search: true
     };
   },
   mounted() {
@@ -54,6 +53,3 @@ export default {
 }
 </script>
 
-<style scoped>
-
-</style>
