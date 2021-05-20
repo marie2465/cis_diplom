@@ -3,8 +3,8 @@
     <form class="people__form blue-form">
       <p class="blue-form__head">Search people</p>
       <div class="people__form-body">
-        <input type="text" class="people__input input" placeholder="Name">
-        <input type="text" class="people__input input" placeholder="Username">
+        <input type="text" class="people__input input" placeholder="Name" v-model="searchValue.firstName">
+        <input type="text" class="people__input input" placeholder="Username" v-model="searchValue.lastName">
         <select name="member" id="countries" class="people__select select">
           <option value="1">Russia</option>
           <option value="2">Argentina</option>
@@ -23,7 +23,7 @@
           <option value="test competition">00-Тестовая компетенция</option>
           <option value="test competition junior">00J-Тестовая компетенция юниоры</option>
         </select>
-        <button class="people__search btn btn--lightblue">
+        <button class="people__search btn btn--lightblue" @click="$emit('searchPeople', searchValue)" type="button">
           Search
         </button>
       </div>
@@ -33,6 +33,12 @@
 
 <script>
 export default {
-  name: "PeopleForm"
+  name: "PeopleForm",
+  data: () => ({
+    searchValue: {
+      firstName: '',
+      lastName: ''
+    }
+  })
 }
 </script>
