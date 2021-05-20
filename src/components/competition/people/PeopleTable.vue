@@ -16,20 +16,20 @@
         </tr>
         </thead>
         <tbody class="people-table__tbody">
-        <tr v-for="num in 5" :key="num">
+        <tr v-for="(value, index) in tableData" :key="index">
           <td class="check-box-col">
             <label>
-              <input type="checkbox" name="one" @change="select" :value="num.toString()" v-model="selected">
-              Эксперт оценки
+              <input type="checkbox" name="one" @change="select" :value="(index + 1).toString()" v-model="selected">
+              {{ value.firstName }}
             </label>
           </td>
-          <td class="last-name-col">Кемеровская область</td>
+          <td class="last-name-col">{{ value.lastName }}</td>
           <td class="position-col">
             Expert - Тестовая компетенция<br>
             Expert - Тестовая компетенция - Юниоры
           </td>
           <td class="member-col">
-            Кемеровская область
+            {{ value.member }}
           </td>
         </tr>
         </tbody>
@@ -48,10 +48,16 @@
 <script>
 export default {
   name: "PeopleTable",
+  props: {
+    tableData: {
+      default: () => [],
+      type: Array
+    }
+  },
   data: function () {
     return {
       selected: [],
-      allSelected:false
+      allSelected: false,
     };
   },
   methods: {
@@ -65,6 +71,9 @@ export default {
     },
     select () {
       this.allSelected = false
+    },
+    sortedFirst(){
+      this.selected = []
     }
   }
 }

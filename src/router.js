@@ -33,6 +33,11 @@ export default new Router({
       path:'/competition/people',
       name:'people',
       component:()=>import('./pages/Competition/People.vue')
+    },
+    {
+      path:'/competition/teams',
+      name:'teams',
+      component:()=>import('./components/competition/teams/Teams.vue')
     }
   ]
 })

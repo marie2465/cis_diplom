@@ -6,7 +6,8 @@
       </a>
       <ul class="nav__list nav__list--left">
         <li class="nav__item">
-          <router-link to="/competition" exact class="nav__link">Competition</router-link><span class="nav__dropdown-icon">&#9660;</span>
+          <router-link to="/competition" exact class="nav__link">Competition</router-link>
+          <span class="nav__dropdown-icon">&#9660;</span>
           <ul class="nav__subnav">
             <li>
               <router-link to="/competition/import" class="nav__subnav-link">Import data</router-link>
@@ -21,7 +22,7 @@
               <router-link to="/competition/people" class="nav__subnav-link">People</router-link>
             </li>
             <li>
-              <router-link to="/competition" class="nav__subnav-link">Teams</router-link>
+              <router-link to="/competition/teams" class="nav__subnav-link">Teams</router-link>
             </li>
             <li>
               <router-link to="/competition" class="nav__subnav-link">Audit Events</router-link>
