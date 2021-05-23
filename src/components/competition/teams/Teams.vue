@@ -7,11 +7,12 @@
           <i class="teams__text">Select a skill</i>
           <CustomSelect
             :options="items"
-            class="selectes"
+            class="selected"
+            v-model="selected"
           />
         </div>
       </div>
-      <div class="teams__table">
+      <div class="teams__table" v-if="selected !== null">
         <div class="teams__table-import">
           <TeamsTable
             :itemsCompetitor="itemsCompetitor"
@@ -60,7 +61,8 @@ export default {
         '(50) Конкурсант МО',
         '(77) Конкурсант Москва'
       ],
-      headertable: 'Competitor not in team'
+      headertable: 'Competitor not in team',
+      selected: ''
     }
   }
 }
