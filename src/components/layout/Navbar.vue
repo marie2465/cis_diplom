@@ -122,17 +122,18 @@
           </ul>
         </li>
       </ul>
-      <img src="../../assets/images/server.svg" alt="home" class="nav__icon">
+      <a><img src="../../assets/images/server.svg" alt="home" class="nav__icon" ></a>
     </nav>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Navbar'
+  name: 'Navbar',
 }
 </script>
 
 <style scoped>
 
 </style>
+<!-- <a><img src="../../assets/images/server.svg" alt="home" class="nav__icon" ><Messages/></a>-->
