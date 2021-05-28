@@ -6,13 +6,15 @@
     <div class="teams__tables-competitors" v-if="showData">
       <div class="teams__tables-items"
            v-for="(value, index) of itemsCompetitor"
-           :key="index">
-        {{ value }}
+           :key="index"
+           :class="{'teams__tables-clicks': value.done}"
+           @click="value.done =!value.done " >
+        {{ value.body }}
       </div>
     </div>
   </div>
 </template>
-
+<!--@click="itemsCompetitor.done = !itemsCompetitor.done"-->
 <script>
 export default {
   name: "TeamsTable",
@@ -30,8 +32,11 @@ export default {
       default: () => ''
     }
   },
-  data() {
+  data: function () {
     return {};
+  },
+  methods: {
+
   }
 }
 </script>
