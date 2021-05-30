@@ -19,10 +19,12 @@
           <TeamsTable
             :itemsCompetitor="itemsCompetitor"
             :showData="true"
-            headerTable="Competitor not in team"/>
+            headerTable="Competitor not in team"
+            @sendId="sendId"
+          />
         </div>
         <div class="teams__table-btn">
-          <button class="btn btn--lightblue teams__btn">
+          <button class="btn btn--lightblue teams__btn" >
             Group
             <span class="chevron right"></span>
           </button>
@@ -60,23 +62,32 @@ export default {
       itemsCompetitor: [
         {
           body: '(16) Конкурсант Республика Татарстан',
+          id: 1,
           done: false
         },
         {
           body: '(42) Конкурсант Кемеровская область',
+          id: 2,
           done: false
         },
         {
           body: '(50) Конкурсант МО',
+          id: 3,
           done: false
         },
         {
           body: '(77) Конкурсант Москва',
+          id: 4,
           done: false
         }
       ],
-      headertable: 'Competitor not in team',
+      headerTable: 'Competitor not in team',
       selected: ''
+    }
+  },
+  methods:{
+    sendId(data){
+      console.log(data)
     }
   }
 }
