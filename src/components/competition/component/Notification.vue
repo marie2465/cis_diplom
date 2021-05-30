@@ -1,5 +1,5 @@
 <template>
-  <div class="notification">
+  <div class="notification" ref="notif">
     <transition-group name="transition-animated"
                       class="notification_list">
       <div class="notification__text"
@@ -19,17 +19,15 @@ export default {
   props: {
     messages: {
       type: Array,
-      default: () => {
-        return []
-      }
+      default: () => []
     }
   },
   methods: {
     hideNotification() {
-      let vm = this;
+      const not = this.$refs.notif
       if (this.messages.length) {
         setTimeout(function () {
-          vm.messages.splice(vm.messages.length - 1, 1)
+          not.style.opacity = "0"
         }, 3000)
       }
     }
@@ -44,7 +42,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

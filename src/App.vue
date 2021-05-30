@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="layout">
-    <Notification/>
+    <Notification :messages="[{name: 'Skills saved', context: 'success', id: 1}]" />
     <Header/>
     <Navbar/>
     <div class="layout__page page">
@@ -26,10 +26,6 @@ export default {
     Footer,
     Header,
     Navbar
-  },
-  mounted() {
-    let timeStamp = Date.now().toLocaleString()
-    this.messages.unshift({name: 'Skills saved', context: 'success', id: timeStamp})
   }
 }
 </script>

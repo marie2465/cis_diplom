@@ -5,16 +5,16 @@
     </div>
     <div class="teams__tables-competitors" v-if="showData">
       <div class="teams__tables-items"
-           v-for="(value, index) of itemsCompetitor"
-           :key="index"
+           v-for="value in itemsCompetitor"
+           :key="value.id"
            :class="{'teams__tables-clicks': value.done}"
-           @click="value.done =!value.done " >
+           @click="value.done =!value.done; $emit('sendId', value.id) ">
         {{ value.body }}
       </div>
     </div>
   </div>
 </template>
-<!--@click="itemsCompetitor.done = !itemsCompetitor.done"-->
+
 <script>
 export default {
   name: "TeamsTable",
@@ -31,16 +31,6 @@ export default {
       type: String,
       default: () => ''
     }
-  },
-  data: function () {
-    return {};
-  },
-  methods: {
-
   }
 }
 </script>
-
-<style scoped>
-
-</style>

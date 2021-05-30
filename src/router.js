@@ -41,7 +41,7 @@ export default new Router({
     },
     {
       path:'/messages',
-      name:'teams',
+      name:'message',
       component:()=>import('./components/competition/component/Messages.vue')
     }
   ]
