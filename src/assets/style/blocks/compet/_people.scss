@@ -28,29 +28,32 @@
     }
   }
 
-  &__first{
+  &__first {
     color: #337ab7;
     margin-left: -15px;
     text-decoration: none;
-    &:hover{
+
+    &:hover {
       text-decoration: underline;
     }
   }
 
-  &__link{
+  &__link {
     color: #337ab7;
     margin-left: 5px;
     text-decoration: none;
-    &:hover{
+
+    &:hover {
       text-decoration: underline;
     }
   }
 
-  &__tfoot{
-    tr{
+  &__tfoot {
+    tr {
       display: flex;
       flex-direction: column;
-      th{
+
+      th {
         text-align: left;
         padding-bottom: 10px;
         font-weight: 400;
@@ -105,5 +108,16 @@
 
   &__search {
     margin-right: auto;
+  }
+}
+
+.addpeople {
+
+  &__header {
+    margin-top: 20px;
+  }
+
+  &__person {
+
   }
 }
