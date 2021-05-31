@@ -8,7 +8,7 @@
            v-for="value in itemsCompetitor"
            :key="value.id"
            :class="{'teams__tables-clicks': value.done}"
-           @click="value.done =!value.done; $emit('sendId', value.id) ">
+           @click="itemClick(value)">
         {{ value.body }}
       </div>
     </div>
@@ -30,6 +30,16 @@ export default {
     headerTable: {
       type: String,
       default: () => ''
+    },
+    itemToDrop: {
+      type: Array,
+      default: () => []
+    }
+  },
+  methods: {
+    itemClick (value) {
+      value.done =! value.done
+      if (value.done) this.$emit('sendId', value.id)
     }
   }
 }

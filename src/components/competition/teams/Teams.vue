@@ -24,17 +24,19 @@
           />
         </div>
         <div class="teams__table-btn">
-          <button class="btn btn--lightblue teams__btn" >
+          <button class="btn btn--lightblue teams__btn" @click.prevent="sendId">
             Group
             <span class="chevron right"></span>
           </button>
-          <button class="btn btn--lightblue teams__btn">
+          <button class="btn btn--lightblue teams__btn" @click.prevent="getItems">
             <span class="chevron left"></span>
             Ungroup
           </button>
+          {{ getItems }}
         </div>
         <div class="teams__table-imports">
           <TeamsTable
+            :itemToDrop="selectedTableItems"
             :showData="false"
             headerTable="Teams"
           />
@@ -47,6 +49,7 @@
 <script>
 import CustomSelect from '@/components/competition/component/CustomSelect'
 import TeamsTable from '@/components/competition/teams/TeamsTable'
+import {mapGetters} from "vuex";
 
 export default {
   name: 'Teams',
@@ -81,18 +84,16 @@ export default {
           done: false
         }
       ],
+      selectedTableItems: [],
       headerTable: 'Competitor not in team',
       selected: ''
     }
   },
-  methods:{
-    sendId(data){
-      console.log(data)
+  ...mapGetters (['getItems']),
+  methods: {
+    sendId (data) {
+      this.selectedTableItems.push(data)
     }
   }
 }
 </script>
-
-<style scoped>
-
-</style>

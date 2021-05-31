@@ -43,6 +43,11 @@ export default new Router({
       path:'/messages',
       name:'message',
       component:()=>import('./components/competition/component/Messages.vue')
+    },
+    {
+      path:'/add-people',
+      name:'addPeople',
+      component:()=>import('./components/competition/people/AddPeople.vue')
     }
   ]
 })
