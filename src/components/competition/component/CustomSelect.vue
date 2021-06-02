@@ -29,7 +29,7 @@ export default {
     default: {
       type: String,
       required: false,
-      default: '',
+      default: () => null,
     },
     tabindex: {
       type: Number,
