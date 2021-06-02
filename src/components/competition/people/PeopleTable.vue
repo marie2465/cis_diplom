@@ -61,7 +61,7 @@ export default {
     };
   },
   methods: {
-    selectAll () {
+    selectAll() {
       this.selected = []
       if (this.allSelected) {
         for (let number = 1; number < 6; number++) {
@@ -69,10 +69,10 @@ export default {
         }
       }
     },
-    select () {
+    select() {
       this.allSelected = false
     },
-    sortedFirst(){
+    sortedFirst() {
       this.selected = []
     }
   }

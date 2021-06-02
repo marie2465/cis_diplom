@@ -1,6 +1,6 @@
 .custom-select {
   position: relative;
-  width: 200px;
+  width: 220px;
   text-align: left;
   outline: none;
   line-height: 34px;
@@ -77,4 +77,10 @@
 
 .selectHide {
   display: none;
+}
+
+.addpeople {
+  &-inputs, &-select {
+    width: 500px;
+  }
 }
