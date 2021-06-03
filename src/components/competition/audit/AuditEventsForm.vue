@@ -1,17 +1,17 @@
 <template>
   <div class="audit__form">
-    <div class="audit__table-col">
-      <div class="audit__table-row">
-        <div>From</div>
-        <input type="datetime-local">
+    <div class="audit__form-col">
+      <div class="audit__form-row">
+        <div class="audit__form-name">From</div>
+        <input class="audit__form-block" type="datetime-local">
       </div>
-      <div class="audit__table-row">
-        <div>To</div>
-        <input type="datetime-local">
+      <div class="audit__form-row">
+        <div class="audit__form-name">To</div>
+        <input class="audit__form-block" type="datetime-local">
       </div>
-      <div class="audit__table-row">
-        <div>event Type</div>
-        <select>
+      <div class="audit__form-row">
+        <div class="audit__form-name">Event Type</div>
+        <select class="audit__form-block">
           <option></option>
           <option>Measurement Mark</option>
           <option>Judgement Score</option>
@@ -23,18 +23,23 @@
           <option>Invalid Judgement Scores (Tablet)</option>
         </select>
       </div>
-      <div class="audit__table-row">
+      <div class="audit__form-row">
         <button class="btn btn--lightblue" type="button">Search</button>
       </div>
     </div>
-    <div class="audit__table-col">
-      <div class="audit__table-row">
-        <div>Skills</div>
-        <CustomSelect/>
+    <div class="audit__form-col">
+      <div class="audit__form-row">
+        <div class="audit__form-name">Skills</div>
+        <div class="audit__form-select">
+          <CustomSelect
+            :options="skills"
+            class="selected"
+          />
+        </div>
       </div>
-      <div class="audit__table-row">
-        <div>Sub Criterion</div>
-        <select>
+      <div class="audit__form-row">
+        <div class="audit__form-name">Sub Criterion</div>
+        <select class="audit__form-block">
           <option></option>
           <option>A1 - Суб критерий 1</option>
           <option>A2 - Суб критерий 2</option>
@@ -42,9 +47,9 @@
           <option>B2 - Суб критерий 2</option>
         </select>
       </div>
-      <div class="audit__table-row">
-        <div>Asspect</div>
-        <select>
+      <div class="audit__form-row">
+        <div class="audit__form-name">Asspect</div>
+        <select class="audit__form-block">
           <option></option>
           <option>A1 - Суб критерий 1</option>
           <option>A2 - Суб критерий 2</option>
@@ -52,9 +57,9 @@
           <option>B2 - Суб критерий 2</option>
         </select>
       </div>
-      <div class="audit__table-row">
-        <div>Competitor</div>
-        <select>
+      <div class="audit__form-row">
+        <div class="audit__form-name">Competitor</div>
+        <select class="audit__form-block">
           <option></option>
           <option>Московская область</option>
           <option>Кемеровская область</option>
@@ -67,11 +72,17 @@
 </template>
 
 <script>
+import CustomSelect from "@/components/competition/component/CustomSelect";
+
 export default {
   name: "AuditEventsForm",
-  data(){
-    return{
-
+  components: {CustomSelect},
+  data() {
+    return {
+      skills: [
+        '00 - Тестовая компетенция',
+        '00J - Тестовая компетенция - Юниоры'
+      ]
     }
   }
 }
