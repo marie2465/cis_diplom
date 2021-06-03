@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="nav">
+    <nav class="nav" v-show="isVisible">
       <a class="nav__first" href="/">
         <img src="../../assets/images/house.svg" alt="home" class="nav__icon">
       </a>
@@ -128,8 +128,15 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
-  name: 'Navbar'
+  name: 'Navbar',
+  computed: {
+    ...mapGetters({
+      isVisible: 'getNavStatus'
+    })
+  }
 }
 </script>
 
