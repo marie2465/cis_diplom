@@ -18,28 +18,32 @@ export default {
   data: () => ({
     tableData: [
       {
-        firstName: 'Эксперт оценки',
-        lastName: 'Кемеровская область',
-        position: 'Expert - Тестовая компетенция\n Expert - Тестовая компетенция - Юниоры',
-        member: 'Кемеровская область'
+        firstName: 'Иван',
+        lastName: 'Иванов',
+        position: 'Competitor',
+        skills: ' Тестовая компетенция',
+        member: 'Московская область'
       },
       {
-        firstName: 'Имя1',
-        lastName: 'Фамилия1',
-        position: 'Expert - Тестовая компетенция\n Expert - Тестовая компетенция - Юниоры',
-        member: 'Кемеровская область'
+        firstName: 'Петр',
+        lastName: 'Петров',
+        position: 'Expert',
+        skills: 'Тестовая компетенция',
+        member: 'Московская область'
       },
       {
-        firstName: 'тест1',
-        lastName: 'тест2',
-        position: 'Expert - Тестовая компетенция\n Expert - Тестовая компетенция - Юниоры',
-        member: 'Кемеровская область'
+        firstName: 'Илья',
+        lastName: 'Звягинцев',
+        position: 'Competitor',
+        skills: 'Тестовая компетенция - Юниоры',
+        member: 'Республика Татарстан'
       },
       {
-        firstName: 'Чорт1',
-        lastName: 'Чорт2',
-        position: 'Expert - Тестовая компетенция\n Expert - Тестовая компетенция - Юниоры',
-        member: 'Кемеровская область'
+        firstName: 'Александр',
+        lastName: 'Соболев',
+        position: 'Expert',
+        skills: ' Тестовая компетенция - Юниоры',
+        member: 'Республика Татарстан'
       }
     ],
     filteredData: []
@@ -50,7 +54,7 @@ export default {
     PeopleTable
   },
   methods: {
-    searchPeople (searchData) {
+    searchPeople(searchData) {
       if (!searchData.firstName && !searchData.lastName) {
         this.filteredData = this.tableData
         return false
@@ -58,6 +62,9 @@ export default {
       let filtered = this.tableData
       filtered = filtered.filter(people => people.firstName.toLowerCase().includes(searchData.firstName))
       filtered = filtered.filter(people => people.lastName.toLowerCase().includes(searchData.lastName))
+      filtered = filtered.filter(people => people.position.toLowerCase().includes(searchData.position))
+      filtered = filtered.filter(people => people.skills.toLowerCase().includes(searchData.skills))
+      filtered = filtered.filter(people => people.member.toLowerCase().includes(searchData.member))
       this.filteredData = filtered
     }
   }

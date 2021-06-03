@@ -12,7 +12,7 @@ export default new Router({
       component: () => import('./layout/authorized.vue'),
       children: [
         {
-          path: '',
+          path: '/home',
           name: 'home',
           component: () => import('./pages/Home.vue'),
         },
@@ -37,9 +37,19 @@ export default new Router({
           component:()=>import('./pages/Competition/People.vue')
         },
         {
+          path:'/competition/add-people',
+          name:'add people',
+          component:()=>import('./components/competition/people/AddPeople.vue')
+        },
+        {
           path:'/competition/teams',
           name:'teams',
           component:()=>import('./components/competition/teams/Teams.vue')
+        },
+        {
+          path:'/competition/audit-events',
+          name:'audit-events',
+          component:()=>import('./pages/Competition/AuditEvents.vue')
         }
       ]
     },

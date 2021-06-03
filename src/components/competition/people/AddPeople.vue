@@ -9,7 +9,7 @@
     <div class="addpeople__header">
       <div class="people__group">
         <h2 class="people__title">People</h2>
-        <router-link class="people__add-person btn btn--green" to="/add-people">Add New Person</router-link>
+        <router-link class="people__add-person btn btn--green" to="/competition/add-people">Add New Person</router-link>
       </div>
     </div>
 
@@ -76,6 +76,14 @@
             <tr>
               <div class="addpeople__skills-text">No Position</div>
             </tr>
+            <tr >
+              <td>
+                <div></div>
+              </td>
+              <td>
+                <div></div>
+              </td>
+            </tr>
             <tr v-if="open===true">
               <td>
                 <CustomSelect
@@ -89,15 +97,15 @@
                     :options="skills"
                     class="selected"/>
                   <button class="btn btn--green addpeople__skills-btn">Save</button>
-                  <button class="btn btn--yellow">Cancel</button>
+                  <button class="btn btn--yellow" @click="open=!open">Cancel</button>
                 </div>
               </td>
             </tr>
             </tbody>
           </table>
-          <a class="addpeople__back addpeople__skills-add" @click="open=!open">
+          <a class="addpeople__back addpeople__skills-add" v-if="open===false" @click="open=!open">
             <div class="addpeople__back-arrow">&#10010;</div>
-            <div class="addpeople__back addpeople__back-txt">Add Position</div>
+            <div class="addpeople__back addpeople__back-txt" >Add Position</div>
           </a>
         </div>
       </div>

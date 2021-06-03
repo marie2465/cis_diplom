@@ -14,7 +14,7 @@
           />
         </div>
       </div>
-      <div class="teams__table" v-if="selected !== null">
+      <div class="teams__table" v-if="selected !== ' '">
         <div class="teams__table-import">
           <TeamsTable
             :itemsCompetitor="itemsCompetitor"
@@ -60,7 +60,7 @@ export default {
   data: function () {
     return {
       items: [
-        'first', 'second', 'third'
+        ' ','first', 'second', 'third'
       ],
       itemsCompetitor: [
         {

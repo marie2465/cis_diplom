@@ -9,7 +9,7 @@
         <input type="text" id="username" required ref="username" v-model="formData.login">
         <label for="password">Password</label>
         <input type="password" id="password" required ref="password" v-model="formData.password">
-        <button type="submit" @click.prevent="checkValid()">Login</button>
+        <button type="submit" @click.prevent="checkValid(); login()">Login</button>
       </form>
     </div>
   </div>
@@ -22,19 +22,29 @@ export default {
     return {
       isValid: true,
       formData: {
-        login:'',
-        password:''
+        login: '',
+        password: ''
       }
     }
   },
   methods: {
-    checkValid () {
+    checkValid() {
       if (this.$refs.username.value === '') {
         this.isValid = false
       } else if (this.$refs.password.value === '') {
         this.isValid = false
       } else {
         this.isValid = true
+      }
+    },
+    login() {
+      let login = this.formData.login
+      let password = this.formData.password
+      if (login === '1' && password === '1234') {
+        this.$router.push('/')
+        console.log('success')
+      } else {
+        console.log(login + ' ' + password + ' = error')
       }
     }
   }
@@ -46,14 +56,17 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
 }
