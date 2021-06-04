@@ -68,7 +68,9 @@
           <table class="addpeople__skills-table" ref="table">
             <thead class="addpeople__skills-thead">
             <tr>
-              <th scope="col" class="addpeople__skills-column"><div>Position</div></th>
+              <th scope="col" class="addpeople__skills-column">
+                <div>Position</div>
+              </th>
               <th scope="col">Skill</th>
             </tr>
             </thead>
@@ -76,7 +78,7 @@
             <tr>
               <div class="addpeople__skills-text">No Position</div>
             </tr>
-            <tr >
+            <tr>
               <td>
                 <div></div>
               </td>
@@ -86,16 +88,20 @@
             </tr>
             <tr v-if="open===true">
               <td>
-                <CustomSelect
-                  class="selected"
-                  :options="roles"
-                />
+                <div class="addpeople__skills-select">
+                  <CustomSelect
+                    class="selected"
+                    :options="roles"
+                  />
+                </div>
               </td>
               <td>
                 <div class="addpeople__skills-col">
-                  <CustomSelect
-                    :options="skills"
-                    class="selected"/>
+                  <div class="addpeople__skills-skills">
+                    <CustomSelect
+                      :options="skills"
+                      class="selected"/>
+                  </div>
                   <button class="btn btn--green addpeople__skills-btn">Save</button>
                   <button class="btn btn--yellow" @click="open=!open">Cancel</button>
                 </div>
@@ -105,7 +111,7 @@
           </table>
           <a class="addpeople__back addpeople__skills-add" v-if="open===false" @click="open=!open">
             <div class="addpeople__back-arrow">&#10010;</div>
-            <div class="addpeople__back addpeople__back-txt" >Add Position</div>
+            <div class="addpeople__back addpeople__back-txt">Add Position</div>
           </a>
         </div>
       </div>

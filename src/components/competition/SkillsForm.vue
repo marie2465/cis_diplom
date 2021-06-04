@@ -25,15 +25,15 @@
                 <th class="skills__table-heads">Skill Number</th>
                 <td>
                   <input class="skills__table-input input" type="text" :disabled="showData"
-                         :value="formData[selectedOption].number">
+                         v-model="number">
                 </td>
               </tr>
               <tr>
                 <th class="skills__table-heads">Name</th>
                 <td>
                   <input class="skills__table-input input" type="text" :disabled="showData"
-                         :value="formData[selectedOption].name">
-                  <select name="lang" id="lang" class="skills__select select" :disabled="showData">
+                         v-model="name">
+                  <select name="lang" id="lang" class="skills__select select" :disabled="showData" v-model="language">
                     <option value="English" :selected="formData[selectedOption].language === 'English'">English</option>
                     <option value="Chinese" :selected="formData[selectedOption].language === 'Chinese'">Chinese (China)</option>
                     <option value="French" :selected="formData[selectedOption].language === 'French'">French</option>
@@ -43,7 +43,7 @@
               <tr>
                 <th class="skills__table-heads">Type</th>
                 <td>
-                  <select name="lang" id="type" class="skills__select select" :disabled="showData">
+                  <select name="lang" id="type" class="skills__select select" :disabled="showData" v-model="type">
                     <option value="zero" :selected="formData[selectedOption].type === null"></option>
                     <option value="Official" :selected="formData[selectedOption].type === 'Official'">
                       Official
@@ -101,7 +101,7 @@
               <tr>
                 <th></th>
                 <td>
-                  <button class="skills__button btn btn--lightblue" type="submit" :disabled="showData">Save</button>
+                  <button class="skills__button btn btn--lightblue" type="submit" :disabled="showData" @click="clear()">Save</button>
                 </td>
               </tr>
             </tbody>
@@ -136,13 +136,23 @@ export default {
         name: 'Тестовая компетенция юниоры',
         language: 'Chinese',
         type: 'Official'
-      }
-    }
+      },
+    },
+    number: null,
+    name: null,
+    language: 'English',
+    type: null
   }),
   methods: {
     addData() {
       this.showData = false
       this.$refs.deleteButton.disabled = true
+      this.name = null
+      this.number=null
+    },
+    clear(){
+      this.name = null
+      this.number=null
     }
   },
   watch: {

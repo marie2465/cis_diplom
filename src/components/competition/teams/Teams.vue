@@ -7,11 +7,13 @@
         </div>
         <div class="teams__content">
           <i class="teams__text">Select a skill</i>
-          <CustomSelect
-            :options="items"
-            class="selected"
-            v-model="selected"
-          />
+          <div class="teams__select">
+            <CustomSelect
+              :options="items"
+              class="selected"
+              v-model="selected"
+            />
+          </div>
         </div>
       </div>
       <div class="teams__table" v-if="selected !== ' '">
@@ -60,7 +62,7 @@ export default {
   data: function () {
     return {
       items: [
-        ' ','first', 'second', 'third'
+        ' ', 'first', 'second', 'third'
       ],
       itemsCompetitor: [
         {
@@ -89,9 +91,9 @@ export default {
       selected: ''
     }
   },
-  ...mapGetters (['getItems']),
+  ...mapGetters(['getItems']),
   methods: {
-    sendId (data) {
+    sendId(data) {
       this.selectedTableItems.push(data)
     }
   }
