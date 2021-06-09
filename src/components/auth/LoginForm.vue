@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import {mapActions} from 'vuex'
+
 export default {
   name: 'LoginForm',
   data: function () {
@@ -37,14 +39,18 @@ export default {
         this.isValid = true
       }
     },
+    ...mapActions([
+      'login'
+    ]),
     login() {
-      let login = this.formData.login
-      let password = this.formData.password
-      if (login === '1' && password === '1234') {
-        this.$router.push('/')
-        console.log('success')
-      } else {
-        console.log(login + ' ' + password + ' = error')
+      {
+        let email = this.formData.login
+        let password = this.formData.password
+        this.$store.dispatch('login', {email, password})
+          .then(() => this.$router.push('/'))
+          .catch(
+            err => console.log(err)
+          )
       }
     }
   }
