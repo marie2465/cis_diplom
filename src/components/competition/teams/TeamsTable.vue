@@ -5,9 +5,11 @@
     </div>
     <div class="teams__tables-competitors" v-if="showData">
       <div class="teams__tables-items"
-           v-for="(value, index) of itemsCompetitor"
-           :key="index">
-        {{ value }}
+           v-for="value in itemsCompetitor"
+           :key="value.id"
+           :class="{'teams__tables-clicks': value.done}"
+           @click="itemClick(value)">
+        {{ value.body }}
       </div>
     </div>
   </div>
@@ -28,14 +30,17 @@ export default {
     headerTable: {
       type: String,
       default: () => ''
+    },
+    itemToDrop: {
+      type: Array,
+      default: () => []
     }
   },
-  data() {
-    return {};
+  methods: {
+    itemClick (value) {
+      value.done =! value.done
+      if (value.done) this.$emit('sendId', value.id)
+    }
   }
 }
 </script>
-
-<style scoped>
-
-</style>

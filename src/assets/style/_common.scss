@@ -68,6 +68,16 @@
       color: black;
     }
   }
+
+  &--yellow{
+    background: #f0ad4e;
+    border: 1px solid transparent;
+
+    &:hover{
+      background-color: #d58512;
+      border-color: #d58512;
+    }
+  }
 }
 
 .input, .select {

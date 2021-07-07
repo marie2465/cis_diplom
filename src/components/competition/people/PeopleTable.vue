@@ -25,8 +25,7 @@
           </td>
           <td class="last-name-col">{{ value.lastName }}</td>
           <td class="position-col">
-            Expert - Тестовая компетенция<br>
-            Expert - Тестовая компетенция - Юниоры
+            {{ value.position }} - {{value.skills}}
           </td>
           <td class="member-col">
             {{ value.member }}
@@ -36,7 +35,7 @@
         <tfoot class="people-table__tfoot">
         <tr>
           <td colspan="1">
-            <button type="button" class="btn btn--red">Delete Selected</button>
+            <button type="button" class="btn btn--red ">Delete Selected</button>
           </td>
         </tr>
         </tfoot>
@@ -61,7 +60,7 @@ export default {
     };
   },
   methods: {
-    selectAll () {
+    selectAll() {
       this.selected = []
       if (this.allSelected) {
         for (let number = 1; number < 6; number++) {
@@ -69,10 +68,10 @@ export default {
         }
       }
     },
-    select () {
+    select() {
       this.allSelected = false
     },
-    sortedFirst(){
+    sortedFirst() {
       this.selected = []
     }
   }

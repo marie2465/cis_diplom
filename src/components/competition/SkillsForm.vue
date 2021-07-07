@@ -12,7 +12,8 @@
           <option value="test competition junior">00J-Тестовая компетенция юниоры</option>
         </select>
         <button type="submit" class="skills__selectes__button-green btn btn--green" @click="addData()">New</button>
-        <button type="submit" class="skills__selectes__button-red btn btn--red" disabled ref="deleteButton">Delete</button>
+        <button type="submit" class="skills__selectes__button-red btn btn--red" disabled ref="deleteButton">Delete
+        </button>
       </div>
       <div class="skills__form blue-form">
         <div class="blue-form__head">
@@ -21,89 +22,94 @@
         <div class="skills__table" :class="showData ? 'skills__table--disabled' : ''">
           <table>
             <tbody>
-              <tr>
-                <th class="skills__table-heads">Skill Number</th>
-                <td>
-                  <input class="skills__table-input input" type="text" :disabled="showData"
-                         :value="formData[selectedOption].number">
-                </td>
-              </tr>
-              <tr>
-                <th class="skills__table-heads">Name</th>
-                <td>
-                  <input class="skills__table-input input" type="text" :disabled="showData"
-                         :value="formData[selectedOption].name">
-                  <select name="lang" id="lang" class="skills__select select" :disabled="showData">
-                    <option value="English" :selected="formData[selectedOption].language === 'English'">English</option>
-                    <option value="Chinese" :selected="formData[selectedOption].language === 'Chinese'">Chinese (China)</option>
-                    <option value="French" :selected="formData[selectedOption].language === 'French'">French</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <th class="skills__table-heads">Type</th>
-                <td>
-                  <select name="lang" id="type" class="skills__select select" :disabled="showData">
-                    <option value="zero" :selected="formData[selectedOption].type === null"></option>
-                    <option value="Official" :selected="formData[selectedOption].type === 'Official'">
-                      Official
-                    </option>
-                    <option value="Demonstration" :selected="formData[selectedOption].type === 'Demonstration'">
-                      Demonstration
-                    </option>
-                    <option value="Host Member" :selected="formData[selectedOption].type === 'Host Member'">
-                      Host Member
-                    </option>
-                    <option value="Presentation" :selected="formData[selectedOption].type === 'Presentation'">
-                      Presentation
-                    </option>
-                    <option value="Exhibition" :selected="formData[selectedOption].type === 'Exhibition'">
-                      Exhibition
-                    </option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <th></th>
-                <td class="skills__checkboxes">
-                  <div class="skills__checkbox">
-                    <label>
-                      <input type="checkbox" name="a" value="Competitors are organised in teams" :disabled="showData">
-                      Competitors are organised in teams
-                    </label>
-                  </div>
-                  <div class="skills__checkbox">
-                    <label>
-                      <input type="checkbox" name="a" value="Allow compatriot marking" :disabled="showData">
-                      Allow compatriot marking
-                    </label>
-                  </div>
-                  <div class="skills__checkbox">
-                    <label>
-                      <input type="checkbox" name="a" value="Allow to generate a landscape marking form" :disabled="showData">
-                      Allow to generate a landscape marking form
-                    </label>
-                  </div>
-                  <div class="skills__checkbox">
-                    <label>
-                      <input type="checkbox" checked name="a" value="Generate final results and medals" :disabled="showData">
-                      Generate final results and medals
-                    </label>
-                  </div>
-                  <div class="skills__checkbox">
-                    <label>
-                      <input type="checkbox" name="a" value="Exclude from member results comparison" :disabled="showData">
-                      Exclude from member results comparison
-                    </label>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th></th>
-                <td>
-                  <button class="skills__button btn btn--lightblue" type="submit" :disabled="showData">Save</button>
-                </td>
-              </tr>
+            <tr>
+              <th class="skills__table-heads">Skill Number</th>
+              <td>
+                <input class="skills__table-input input" type="text" :disabled="showData"
+                       :value="formData[selectedOption].number">
+              </td>
+            </tr>
+            <tr>
+              <th class="skills__table-heads">Name</th>
+              <td>
+                <input class="skills__table-input input" type="text" :disabled="showData"
+                       :value="formData[selectedOption].name">
+                <select name="lang" id="lang" class="skills__select select" :disabled="showData">
+                  <option value="English" :selected="formData[selectedOption].language === 'English'">English</option>
+                  <option value="Chinese" :selected="formData[selectedOption].language === 'Chinese'">Chinese (China)
+                  </option>
+                  <option value="French" :selected="formData[selectedOption].language === 'French'">French</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th class="skills__table-heads">Type</th>
+              <td>
+                <select name="lang" id="type" class="skills__select select" :disabled="showData">
+                  <option value="zero" :selected="formData[selectedOption].type === null"></option>
+                  <option value="Official" :selected="formData[selectedOption].type === 'Official'">
+                    Official
+                  </option>
+                  <option value="Demonstration" :selected="formData[selectedOption].type === 'Demonstration'">
+                    Demonstration
+                  </option>
+                  <option value="Host Member" :selected="formData[selectedOption].type === 'Host Member'">
+                    Host Member
+                  </option>
+                  <option value="Presentation" :selected="formData[selectedOption].type === 'Presentation'">
+                    Presentation
+                  </option>
+                  <option value="Exhibition" :selected="formData[selectedOption].type === 'Exhibition'">
+                    Exhibition
+                  </option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th></th>
+              <td class="skills__checkboxes">
+                <div class="skills__checkbox">
+                  <label>
+                    <input type="checkbox" name="a" value="Competitors are organised in teams" :disabled="showData">
+                    Competitors are organised in teams
+                  </label>
+                </div>
+                <div class="skills__checkbox">
+                  <label>
+                    <input type="checkbox" name="a" value="Allow compatriot marking" :disabled="showData">
+                    Allow compatriot marking
+                  </label>
+                </div>
+                <div class="skills__checkbox">
+                  <label>
+                    <input type="checkbox" name="a" value="Allow to generate a landscape marking form"
+                           :disabled="showData">
+                    Allow to generate a landscape marking form
+                  </label>
+                </div>
+                <div class="skills__checkbox">
+                  <label>
+                    <input type="checkbox" checked name="a" value="Generate final results and medals"
+                           :disabled="showData">
+                    Generate final results and medals
+                  </label>
+                </div>
+                <div class="skills__checkbox">
+                  <label>
+                    <input type="checkbox" name="a" value="Exclude from member results comparison" :disabled="showData">
+                    Exclude from member results comparison
+                  </label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th></th>
+              <td>
+                <button class="skills__button btn btn--lightblue" type="submit" :disabled="showData" @click="clear()">
+                  Save
+                </button>
+              </td>
+            </tr>
             </tbody>
           </table>
         </div>
@@ -136,13 +142,21 @@ export default {
         name: 'Тестовая компетенция юниоры',
         language: 'Chinese',
         type: 'Official'
-      }
-    }
+      },
+    },
+    number: null,
+    name: null,
+    language: 'English',
+    type: null
   }),
   methods: {
     addData() {
       this.showData = false
       this.$refs.deleteButton.disabled = true
+      this.selectedOption = 'zero'
+    },
+    clear() {
+      this.selectedOption = 'zero'
     }
   },
   watch: {
@@ -153,7 +167,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

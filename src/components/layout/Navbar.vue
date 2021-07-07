@@ -25,7 +25,7 @@
               <router-link to="/competition/teams" class="nav__subnav-link">Teams</router-link>
             </li>
             <li>
-              <router-link to="/competition" class="nav__subnav-link">Audit Events</router-link>
+              <router-link to="/competition/audit-events" class="nav__subnav-link">Audit Events</router-link>
             </li>
           </ul>
         </li>

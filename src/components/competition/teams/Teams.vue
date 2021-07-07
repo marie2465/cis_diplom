@@ -2,36 +2,45 @@
   <div class="component">
     <div class="teams">
       <div>
-        <p class="teams__head">Teams Menegment</p>
+        <div class="teams__head">
+          <div class="teams__head-name">Teams Menegment</div>
+        </div>
         <div class="teams__content">
           <i class="teams__text">Select a skill</i>
-          <CustomSelect
-            :options="items"
-            class="selectes"
-          />
+          <div class="teams__select">
+            <CustomSelect
+              :options="items"
+              class="selected"
+              v-model="selected"
+            />
+          </div>
         </div>
       </div>
-      <div class="teams__table">
+      <div class="teams__table" v-if="selected !== ' '">
         <div class="teams__table-import">
           <TeamsTable
             :itemsCompetitor="itemsCompetitor"
-            :showData="showData = true"
-            :headerTable="headertable = 'Competitor not in team'"/>
+            :showData="true"
+            headerTable="Competitor not in team"
+            @sendId="sendId"
+          />
         </div>
         <div class="teams__table-btn">
-          <button class="btn btn--lightblue teams__btn" disabled>
+          <button class="btn btn--lightblue teams__btn" @click.prevent="sendId">
             Group
             <span class="chevron right"></span>
           </button>
-          <button class="btn btn--lightblue teams__btn" disabled>
+          <button class="btn btn--lightblue teams__btn" @click.prevent="getItems">
             <span class="chevron left"></span>
             Ungroup
           </button>
+          {{ getItems }}
         </div>
         <div class="teams__table-imports">
           <TeamsTable
-            :showData="showData = false"
-            :headerTable="headertable = 'Teams'"
+            :itemToDrop="selectedTableItems"
+            :showData="false"
+            headerTable="Teams"
           />
         </div>
       </div>
@@ -42,6 +51,7 @@
 <script>
 import CustomSelect from '@/components/competition/component/CustomSelect'
 import TeamsTable from '@/components/competition/teams/TeamsTable'
+import {mapGetters} from "vuex";
 
 export default {
   name: 'Teams',
@@ -52,20 +62,40 @@ export default {
   data: function () {
     return {
       items: [
-        'first', 'second', 'third'
+        ' ', 'first', 'second', 'third'
       ],
       itemsCompetitor: [
-        '(16) Конкурсант Республика Татарстан',
-        '(42) Конкурсант Кемеровская область',
-        '(50) Конкурсант МО',
-        '(77) Конкурсант Москва'
+        {
+          body: '(16) Конкурсант Республика Татарстан',
+          id: 1,
+          done: false
+        },
+        {
+          body: '(42) Конкурсант Кемеровская область',
+          id: 2,
+          done: false
+        },
+        {
+          body: '(50) Конкурсант МО',
+          id: 3,
+          done: false
+        },
+        {
+          body: '(77) Конкурсант Москва',
+          id: 4,
+          done: false
+        }
       ],
-      headertable: 'Competitor not in team'
+      selectedTableItems: [],
+      headerTable: 'Competitor not in team',
+      selected: ''
+    }
+  },
+  ...mapGetters(['getItems']),
+  methods: {
+    sendId(data) {
+      this.selectedTableItems.push(data)
     }
   }
 }
 </script>
-
-<style scoped>
-
-</style>
