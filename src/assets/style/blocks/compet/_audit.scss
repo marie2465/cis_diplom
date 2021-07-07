@@ -1,0 +1,51 @@
+.audit {
+  &__header {
+    font-size: 30px;
+    line-height: 1.1;
+  }
+
+  &__form {
+    margin-top: 15px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 15px 30px;
+    display: flex;
+    flex-direction: row;
+    &-col {
+      width: 50%;
+    }
+    &-row {
+      display: flex;
+      flex-direction: row;
+      margin: 10px;
+    }
+    &-name{
+      width: 25%;
+      padding: 5px 0;
+    }
+    &-block{
+      padding: 5px 10px;
+      width: 50%;
+      border: 1px solid #cccccc;
+      font-size: 12px;
+      border-radius: 4px;
+    }
+    &-select{
+      width: 50%;
+    }
+  }
+  &__table{
+    margin-top: 10px;
+    &-thead{
+      width: 100%;
+      th{
+        padding: 0  30px;
+      }
+    }
+    &-line{
+      color: #cccccc;
+      width: 100%;
+      margin-top: 5px;
+    }
+  }
+}

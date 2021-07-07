@@ -1,0 +1,158 @@
+.teams {
+  &__head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &-name {
+      font-size: 30px;
+      line-height: 1.1;
+      width: auto;
+    }
+
+    &-notifications {
+      float: right;
+      z-index: 2;
+    }
+  }
+
+  &__content {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__text {
+    font-style: normal;
+    margin-right: 10px;
+  }
+  &__select{
+    width: 220px;
+  }
+
+  &__search {
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    margin-left: 10px;
+    font-size: 25px;
+    width: 15%;
+
+    &-div {
+      border-top: 1px solid #cccccc;
+    }
+
+    &-p {
+      border: 1px solid #ccc;
+      margin: 5px;
+      font-size: 25px;
+      align-items: center;
+      width: 94%;
+    }
+
+    &-p:focus {
+      border: 1px solid #000;
+    }
+
+    &-text {
+      font-size: 15px;
+      padding-left: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
+  &__dropdown-icon {
+    right: -20px;
+    font-size: 10px;
+    padding-left: 5px;
+  }
+
+  &__table {
+    margin-top: 10px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+
+    &-import {
+      margin-right: 20px;
+      width: 40%;
+    }
+
+    &-btn {
+      padding: 10px;
+      margin: 10px;
+    }
+
+    &-imports {
+      margin-left: 20px;
+      width: 30%;
+    }
+  }
+
+  &__tables {
+    border: 1px solid #003b5c;
+    border-radius: 4px;
+
+    &-header {
+      background: #003b5c;
+      width: 100%;
+    }
+
+    &-content {
+      padding: 10px 20px;
+      color: white;
+    }
+
+    &-competitors {
+      margin: 10px 10px 30px 10px;
+      border-radius: 4px;
+      border: 1px solid #cccccc;
+      border-bottom: 1px solid white;
+    }
+
+    &-items {
+      color: #545454;
+      padding: 10px 15px;
+      border-bottom: 1px solid #cccccc;
+    }
+
+    &-clicks {
+      color:#3c763d;
+      background: #dff0d8;
+    }
+  }
+
+  &__btn {
+    margin: 70px 3px;
+  }
+}
+
+.chevron {
+  &:before {
+    border-style: solid;
+    border-width: 0.25em 0.25em 0 0;
+    content: '';
+    display: inline-block;
+    height: 0.45em;
+    left: 0.15em;
+    position: relative;
+    top: 0.15em;
+    transform: rotate(-45deg);
+    vertical-align: top;
+    width: 0.45em;
+  }
+}
+
+.chevron.right {
+  &:before {
+    left: 0;
+    transform: rotate(45deg);
+  }
+}
+
+.chevron.left {
+  &:before {
+    left: 0.25em;
+    transform: rotate(-135deg);
+  }
+}
+

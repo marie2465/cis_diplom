@@ -11,8 +11,21 @@ body{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+button, a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 // Blocks
 @import "blocks/layout/header";
 @import "blocks/layout/navbar";
 @import "blocks/layout/footer";
 @import "blocks/auth/form";
+@import "blocks/compet/import";
+@import "blocks/compet/skill";
+@import "blocks/compet/people";
+@import "blocks/compet/teams";
+@import "blocks/compet/audit";
+@import "blocks/compet/component/customselect";
+@import "blocks/compet/component/notification";
+@import "blocks/compet/component/message";

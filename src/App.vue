@@ -1,30 +1,14 @@
 <template>
-  <div id="app" class="layout">
+  <div id="app">
     <Header/>
-    <Navbar/>
-    <div class="layout__page page">
-      <div class="page__content">
-        <router-view></router-view>
-      </div>
-    </div>
-    <Footer/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-
-import Navbar from '@/components/layout/Navbar'
-import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
-import Import from './components/competition/ImportForm'
-
+import Header from "@/components/layout/Header";
 export default {
   name: 'App',
-  components: {
-    Import,
-    Footer,
-    Header,
-    Navbar
-  }
+  components: {Header}
 }
 </script>

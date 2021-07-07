@@ -1,0 +1,279 @@
+.people-table {
+  border-collapse: collapse;
+  width: 100%;
+
+  &__thead {
+    th {
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      padding: 5px 0 5px 15px;
+      text-align: left;
+    }
+  }
+
+  &__tbody {
+    td {
+      display: table-cell;
+      vertical-align: top;
+      padding: 12px 15px;
+      border: none;
+      width: 1%;
+      white-space: nowrap;
+    }
+
+    tr:nth-child(2n) {
+      td {
+        background: #eee;
+      }
+    }
+  }
+
+  &__first {
+    color: #337ab7;
+    margin-left: -15px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__link {
+    color: #337ab7;
+    margin-left: 5px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__tfoot {
+    tr {
+      display: flex;
+      flex-direction: column;
+
+      th {
+        text-align: left;
+        padding-bottom: 10px;
+        font-weight: 400;
+      }
+
+      button{
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.people {
+  &__title {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex: 1 1 33%;
+
+    &:nth-child(1) {
+      justify-content: space-between;
+    }
+  }
+
+  &__table {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 15px;
+    flex: 1 1 75%;
+  }
+
+  &__form {
+    margin-left: 15px;
+    flex: 1 1 33%;
+
+    &-body {
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+    }
+  }
+
+  &__add-person {
+    font-size: 14px;
+  }
+
+  &__input, &__select {
+    margin-bottom: 15px;
+  }
+
+  &__search {
+    margin-right: auto;
+  }
+}
+
+.addpeople {
+  padding: 0 15px;
+
+  &__back {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 15px;
+    color: #337ab7;
+
+    &:hover {
+      color: #003b5c;
+    }
+
+    &-txt {
+      margin-left: 5px;
+
+      &:hover {
+        text-decoration: underline #003b5c;
+      }
+    }
+
+    &-arrow {
+      font-size: 20px;
+      font-weight: bolder;
+    }
+  }
+
+  &__header {
+    margin: 20px 15px 0 15px;
+  }
+
+  &__person {
+    border: 1px solid #003b5c;
+    border-radius: 4px;
+
+    &-header {
+      padding: 10px;
+      background: #003b5c;
+      font-size: 14px;
+      border: 1px solid #003b5c;
+      color: white;
+    }
+
+    &-container {
+      padding: 15px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    &-info {
+      width: 100%;
+    }
+
+    &-blocks {
+      margin: 5px 0;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+
+    &-text {
+      padding: 8px 0;
+      width: 25%;
+    }
+
+    &-inputs, &-select {
+      width: 100%;
+    }
+
+    &-btn {
+      padding-top: 10px;
+    }
+
+    &-image {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    &-imgs {
+      width: 180px;
+      height: 180px;
+      border-radius: 4px;
+    }
+
+    &-load {
+      padding-top: 5px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    &-btns {
+      padding: 1px 6px;
+    }
+
+    &-texts {
+      font-size: 14px;
+      padding-left: 10px;
+      padding-right: 30px;
+    }
+  }
+
+  &__skills {
+    margin-top: 25px;
+    border: 1px solid #003b5c;
+    border-radius: 4px;
+
+    &-container {
+      padding: 15px;
+    }
+
+    &-table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    &-thead {
+      th {
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        padding: 5px 0 5px 15px;
+        text-align: left;
+        font-weight: bold;
+        font-size: 15px;
+      }
+    }
+    td{
+      padding-left: 15px;
+    }
+
+    &-text{
+      padding-left: 15px;
+      margin: 5px 0;
+    }
+    &-select{
+      width: 70%;
+    }
+    &-skills{
+      width: 25%;
+    }
+    &-column{
+      width: 25%;
+    }
+
+    &-add {
+      margin: 5px;
+    }
+
+    &-col{
+      display: flex;
+      flex-direction: row;
+    }
+
+    &-btn{
+      margin-left: 30px;
+      margin-right: 4px;
+    }
+  }
+}
